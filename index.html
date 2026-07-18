@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Centre d'assistance officiel de Replic Games.">
+    <title>Centre d'assistance - Replic Games</title>
+
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <div id="site-header"></div>
+
+    <main id="top">
+        <section id="home" class="page-section support-home support-home-single" aria-labelledby="home-title">
+            <div class="home-hero-sav">
+                <h1 id="home-title">Centre d'assistance Replic Games</h1>
+                <p class="support-home-intro">
+                    Bienvenue sur la page de SAV de Replic Games. Vous pouvez consulter les
+                    questions frequentes ci-dessous ou transmettre une demande via le formulaire.
+                </p>
+            </div>
+        </section>
+
+        <section id="faq" class="page-section section-faq" aria-labelledby="faq-title">
+            <div class="section-heading">
+                <div>
+                    <h2 id="faq-title">Questions frequentes</h2>
+                </div>
+            </div>
+
+            <div class="faq-list">
+                <details>
+                    <summary>Mon jeu ne se lance plus. Que faire ?</summary>
+                    <p>
+                        Verifiez que votre systeme est a jour, redemarrez votre appareil puis controlez
+                        l'integrite des fichiers du jeu depuis votre plateforme de telechargement.
+                    </p>
+                </details>
+
+                <details>
+                    <summary>Je n'ai pas recu mon achat.</summary>
+                    <p>
+                        Verifiez l'historique de vos commandes ainsi que l'adresse e-mail associee a
+                        votre compte. Certains achats peuvent necessiter quelques minutes avant d'apparaitre.
+                    </p>
+                </details>
+
+                <details>
+                    <summary>Mon code d'activation ne fonctionne pas.</summary>
+                    <p>
+                        Assurez-vous que le code a ete saisi sans espace et sur la plateforme correspondante.
+                        Un code deja utilise ne peut generalement pas etre active une seconde fois.
+                    </p>
+                </details>
+
+                <details>
+                    <summary>Comment demander le remboursement d'un jeu ?</summary>
+                    <p>
+                        Les demandes sont etudiees selon la date d'achat, le temps d'utilisation et les
+                        conditions generales de la plateforme concernee.
+                    </p>
+                </details>
+
+                <details>
+                    <summary>Comment recuperer l'acces a mon compte ?</summary>
+                    <p>
+                        Utilisez la procedure "Mot de passe oublie" depuis la page de connexion.
+                        Un message de recuperation sera envoye a l'adresse associee au compte.
+                    </p>
+                </details>
+            </div>
+        </section>
+
+        <section id="contact" class="page-section" aria-labelledby="contact-title">
+            <div class="form-panel">
+                <div class="panel-heading">
+                    <h2 id="contact-title">Transmettre une demande</h2>
+                    <p>
+                        Decrivez votre probleme aussi precisement que possible. Nos équipes répondront à votre demande dans les plus brefs délais.
+                    </p>
+                </div>
+
+                <form id="support-form" novalidate>
+                    <div class="form-grid">
+                        <div class="form-group">
+                            <label for="name">Nom complet</label>
+                            <input id="name" name="name" type="text" placeholder="Votre nom">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="email">Adresse e-mail</label>
+                            <input id="email" name="email" type="email" placeholder="nom@exemple.fr">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="game">Jeu concerne</label>
+                            <select id="game" name="game">
+                                <option value="">Selectionnez un jeu</option>
+                                <option>Jeu video 1</option>
+                                <option>Jeu video 2</option>
+                                <option>Jeu video 3</option>
+                                <option>Autre produit</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="platform">Plateforme</label>
+                            <select id="platform" name="platform">
+                                <option value="">Selectionnez une plateforme</option>
+                                <option>PC</option>
+                                <option>PlayStation 5</option>
+                                <option>Xbox Series</option>
+                                <option>Nintendo Switch</option>
+                                <option>Mobile</option>
+                                <option>Autre</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group full-width">
+                            <label for="subject">Sujet de la demande</label>
+                            <input
+                                id="subject"
+                                name="subject"
+                                type="text"
+                                placeholder="Resumez votre probleme en quelques mots"
+                            >
+                        </div>
+
+                        <div class="form-group full-width">
+                            <label for="message">Description du probleme</label>
+                            <textarea
+                                id="message"
+                                name="message"
+                                placeholder="Expliquez le probleme rencontre, les messages d'erreur et les solutions deja essayees..."
+                            ></textarea>
+                        </div>
+
+                    </div>
+
+                    <div class="form-actions">
+                        <button class="submit-button" type="submit">Envoyer la demande</button>
+                    </div>
+
+                    <div id="fake-message" class="fake-message" role="status" aria-live="polite">
+                        <strong>Service temporairement indisponible.</strong>
+                        Votre demande n'a pas ete transmise. Veuillez reessayer ulterieurement.
+                    </div>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <div id="site-footer"></div>
+</body>
+</html>
