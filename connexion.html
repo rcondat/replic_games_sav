@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Connexion a l'espace interne Replic Games.">
+    <title>Connexion - Replic Games</title>
+
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <div id="site-header"></div>
+
+    <main class="login-page">
+        <section class="login-shell" aria-labelledby="login-title">
+            <div class="login-panel">
+                <div class="panel-heading">
+                    <h1 id="login-title">Connexion</h1>
+                    <p>
+                        Identifiez-vous pour acceder a votre espace de consultation securise.
+                    </p>
+                </div>
+
+                <form id="login-form" class="login-form" novalidate>
+                    <div class="form-grid">
+                        <div class="form-group full-width">
+                            <label for="login">Login</label>
+                            <input id="login" name="login" type="text" placeholder="Votre identifiant">
+                        </div>
+
+                        <div class="form-group full-width">
+                            <label for="password">Mot de passe</label>
+                            <input id="password" name="password" type="password" placeholder="Votre mot de passe">
+                        </div>
+                    </div>
+
+                    <div class="form-actions">
+                        <button class="submit-button" type="submit">Connexion</button>
+                    </div>
+
+                    <div id="login-message" class="fake-message" role="status" aria-live="polite"></div>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <div id="site-footer"></div>
+</body>
+</html>

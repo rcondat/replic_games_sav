@@ -25,11 +25,18 @@ html {
 
 body {
     margin: 0;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
     color: var(--text);
     background: var(--paper);
     font-family: Calibri, Carlito, "Segoe UI", Arial, sans-serif;
     font-size: 17px;
     line-height: 1.5;
+}
+
+main {
+    flex: 1 0 auto;
 }
 
 body::before {
@@ -833,6 +840,71 @@ input[type="file"] {
     box-shadow: var(--shadow);
 }
 
+.claim-banner {
+    margin: -38px -36px 30px;
+    padding: 0;
+    color: #dfffe3;
+    background: #050805;
+    border: 2px solid #2ccf5a;
+    box-shadow: none;
+    font-family: "Courier New", Courier, monospace;
+}
+
+.claim-banner.is-hidden {
+    display: none;
+}
+
+.timed-visibility.is-hidden {
+    display: none;
+}
+
+.claim-banner .section-label.light {
+    margin: 0;
+    padding: 14px 18px 12px;
+    display: block;
+    color: #050805;
+    background: #2ccf5a;
+    font-weight: 900;
+    letter-spacing: 0.12em;
+}
+
+.claim-banner h2,
+.claim-banner p {
+    padding-left: 22px;
+    padding-right: 22px;
+}
+
+.claim-banner h2 {
+    margin: 0;
+    padding-top: 20px;
+    padding-bottom: 16px;
+    color: #ffffff;
+    font-size: clamp(1.8rem, 4vw, 2.8rem);
+    line-height: 1;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    border-bottom: 1px solid rgba(44, 207, 90, 0.55);
+}
+
+.claim-banner p {
+    margin: 0;
+    padding-top: 14px;
+    color: #818181;
+    line-height: 1.7;
+}
+
+.claim-meta {
+    margin-top: 0;
+    padding-top: 18px !important;
+    padding-bottom: 18px;
+    color: #ffffff !important;
+    font-weight: 800;
+    font-size: 0.74rem !important;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    border-top: 1px solid rgba(44, 207, 90, 0.55);
+}
+
 .legal-card h1 {
     margin: 0 0 22px;
     color: var(--ink);
@@ -850,6 +922,58 @@ input[type="file"] {
     margin-bottom: 0;
 }
 
+.account-layout {
+    display: grid;
+    grid-template-columns: minmax(0, 1.2fr) minmax(220px, 280px);
+    gap: 28px;
+    align-items: start;
+}
+
+.account-details p {
+    margin-bottom: 14px;
+}
+
+.account-photo-shell {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.account-photo {
+    width: 100%;
+    max-width: 280px;
+    display: block;
+    border: 1px solid var(--ink);
+    box-shadow: var(--shadow);
+}
+
+.login-page {
+    padding: 68px 0 82px;
+}
+
+.login-shell {
+    width: min(calc(100% - 48px), 720px);
+    margin: 0 auto;
+}
+
+.login-panel {
+    padding: 38px 36px 34px;
+    background: var(--paper-light);
+    border: 1px solid var(--ink);
+    box-shadow: var(--shadow);
+}
+
+.login-panel h1 {
+    margin: 4px 0 0;
+    color: var(--ink);
+    font-size: clamp(2.2rem, 5vw, 3.6rem);
+    line-height: 1;
+    text-transform: uppercase;
+}
+
+.login-form .form-actions {
+    justify-content: flex-end;
+}
+
 @media (max-width: 1020px) {
     .header-shell {
         min-height: 92px;
@@ -865,7 +989,8 @@ input[type="file"] {
     }
 
     .hero-shell,
-    .support-layout {
+    .support-layout,
+    .account-layout {
         grid-template-columns: 1fr;
     }
 
@@ -965,7 +1090,8 @@ input[type="file"] {
     }
 
     .section-faq + .page-section,
-    .legal-page {
+    .legal-page,
+    .login-page {
         padding-top: 48px;
     }
 
@@ -1000,7 +1126,24 @@ input[type="file"] {
         width: min(calc(100% - 28px), 880px);
     }
 
+    .login-shell {
+        width: min(calc(100% - 28px), 720px);
+    }
+
     .legal-card {
+        padding: 25px 20px;
+    }
+
+    .claim-banner {
+        margin: -25px -20px 24px;
+        padding: 0;
+    }
+
+    .account-photo-shell {
+        justify-content: flex-start;
+    }
+
+    .login-panel {
         padding: 25px 20px;
     }
 
